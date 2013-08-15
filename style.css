@@ -1,0 +1,471 @@
+/*
+Theme Name: MediumPress
+Theme URI: http://www.arrizalamin.com/
+Description: A WordPress Theme Inspired by Medium.com
+Author: Arrizal Amin
+Author URI: http://www.arrizalamin.com/
+Version: 1.0
+
+License: Dual licensed under the MIT and GPL licenses
+License URI: http://opensource.org/licenses/MIT and http://www.gnu.org/licenses/gpl.html
+
+*/
+
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-width: 960px) {
+	#page-wrap { 
+		width: 90%;
+	}
+	
+	.post { 
+	}
+
+	.bio {
+		margin-bottom: 5px;
+		display: block;
+		overflow: hidden;
+	}
+
+	.author-name {
+		font-size: 16px;
+		font-weight: 700;
+		color: #818181;
+		background-color: #ffffff;
+		min-width: 58px;
+	}
+
+	.author-picture {
+		float: left;
+		margin-right: 10px;;
+	}
+
+	.author-bio {
+		font-size: 14px;
+		font-weight: 400;
+		color: #818181;
+		background-color: #ffffff;
+	}
+
+	.author-social ul {
+		float: left;
+		list-style: none;
+		display: inline;
+		width: 100%;
+		margin: auto;
+		padding: 0;
+	}
+
+	.author-social li {
+		display: inline;
+		margin: auto;
+		padding: 0;
+	}
+
+	.hratas {
+		display: none;
+		margin-bottom: 25px;
+	}
+}
+
+/* #### Desktops #### */
+@media screen and (min-width: 960px){
+	#page-wrap { 
+		width: 900px;
+		overflow: hidden;
+	}
+	
+	.post { 
+		width: 740px;
+		float: right;
+	}
+
+	.bio {
+		float: left;
+		width: 130px;
+		margin-top: 10px;
+	}
+
+	.author-name {
+		float: right;
+		font-size: 16px;
+		font-weight: 700;
+		color: #000;
+		background-color: #ffffff;
+		min-width: 58px;
+	}
+
+	.author-picture {
+		float: right;
+		display: block;
+		margin-left: auto;
+		margin-right: auto
+	}
+
+	img.avatar-73 {
+		border-radius: 50%;
+	}
+
+	.author-bio {
+		float: right;
+		color: #818181;
+		font-weight: 400;
+		text-align: right;
+		background-color: #ffffff;
+	}
+
+	.author-social ul {
+		list-style: none;
+		display: inline;
+		width: 100%;
+		margin: auto;
+	}
+
+	.author-social li {
+		display: inline;
+		float: right;
+		margin: auto;
+	}
+
+	.hrbawah {
+		display: none;
+		margin-bottom: 55px;
+	}
+}
+
+@media screen {
+
+body {
+	margin: 0;
+	background-color: #ffffff;
+	color: #333333;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	font-family: "Droid Sans","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+}
+
+.screen-reader-text { position: absolute; left: -9999px; top: -9999px; }
+.clear { clear: both; }
+.group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* html .group, *:first-child+html .group { zoom: 1; } /* First selector = IE6, Second Selector = IE 7 */
+
+.fn, .says {
+	font-size: 30px;
+}
+
+.thread-odd {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.disqus_comments {
+	margin-top: 20px;
+}
+
+.bio-and-post-group {
+	overflow: hidden;
+}
+
+#page-wrap { 
+	padding-top: 60px;
+	margin: 0 auto;
+	line-height: 1.4;
+}
+	
+} /* END screen media */
+
+
+@media print {
+
+.do-not-print { display: none; }
+#comments { page-break-before: always; }
+	body 
+	{ 
+		width: 100% !important; 
+		margin: 0 !important; 
+		padding: 0 !important; 
+		line-height: 1.4; 
+		word-spacing: 1.1pt; 
+		letter-spacing: 0.2pt; 
+		background: none; 
+		font-size: 14pt; 
+		background-color: #ffffff;
+		color: #333333;
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+		font-family: "Droid Sans","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	}
+
+	.screen-reader-text { position: absolute; left: -9999px; top: -9999px; }
+	.clear { clear: both; }
+	.group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+	* html .group, *:first-child+html .group { zoom: 1; } /* First selector = IE6, Second Selector = IE 7 */
+
+	.disqus_comments {
+		display: none;
+	}
+
+	#top-menu {
+		display: none;
+	}
+
+	#page-wrap { 
+		margin: 0 auto;
+		line-height: 1.4;
+	}
+
+	h2 {
+		font-size: 32px;
+		line-height: 1;	
+	}
+
+	h3 {
+		line-height: 1.2;
+		font-size: 26px;
+	}
+
+	h4 {
+		font-size: 20px;
+	}
+
+	.post_title {
+		font-size: 32px;
+		line-height: 1.1;	
+	}
+
+	#top-menu {
+		display: none;
+	}
+
+	.author-social {
+		display: none;
+	}
+	
+	.bio {
+		display: none;
+	}
+} /* END print media */
+
+
+.featured-image, .featured-img {
+	top: 0;
+	width: 100%;
+	height: 537px;
+	left: 0;
+}
+
+#page-wrap {
+	position: relative;
+}
+
+.icon-comment-fill {
+	float: right;
+	color: #232322;
+	padding: 0 8px 0 8px;
+	margin-top: -20px;
+	opacity: .2;
+	font-size: 25px;
+	cursor: pointer;
+}
+
+.icon-comment-fill:hover {
+	opacity: 1;
+}
+
+ul, ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	display: list-item;
+}
+
+.search-icon {
+	margin-top: 12px;
+	color: #b3b3b1;
+	font-weight: 700;
+	display: block;
+	float: right;
+	cursor: pointer;
+}
+
+#nav-list-search {
+	display: none;
+}
+
+#searchform>input {
+	border:1px solid #232322 !important;
+	border-radius:2px;
+	width: 200px;
+	line-height: 10px;
+	padding: 5px;
+	color: #232322;
+	font-size: 15px;
+}
+
+#nav, #comment-sidebar {
+	top: 0;
+	z-index: -1;
+}
+
+#nav {
+	height: 100%;
+	display: none;
+	position: fixed;
+	left: 0;
+	width: 280px;
+	background-color: #232322;
+}
+
+#comment-sidebar {
+	display: block;
+	position: absolute;
+	right: 0;
+	width: 50%;
+	background-color: white;
+}
+
+.nav-list {
+	margin-top: 30px;
+	position: relative;
+	font-weight: 400;
+}
+
+.nav-list-item-btn {
+	line-height: 46px;
+	color: #b3b3b1;
+	background-color: #232322;
+	font-weight: 700;
+	display: block;
+	padding: 0 16px 0 22px;
+	height: 43px;
+}
+
+span[class*="icon-"] {
+	margin-right: 20px;
+}
+
+a#nav-toggle {
+	width: 30px;
+	height: 30px;
+	padding: 5px;
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	background: #232322;
+	color: white;
+	font-weight: bolder;
+}
+
+#wrapper {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: block;
+	background-color: white;
+}
+
+.index-box {
+	min-height: 100%;
+	height: 100%;
+}
+
+.entry {
+	font-family: "Arvo","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	font-size: 22px;	
+	line-height: 1.6;
+ }
+.entry a { }
+.entry a:hover { }
+
+.entry a, .entry a:visited, .entry a:hover, .entry a:active  {
+	color: #6699FF;
+	background-color: #ffffff;
+}
+
+.entry li {
+	font-weight: 400;
+}
+
+.meta {
+	display: inline;
+	color: #818181;
+	background-color: #ffffff;
+}
+
+.bio-and-post-group {
+	overflow: hidden;
+}
+
+#footer {
+	text-align: right;
+}
+
+.post_title a {
+	color: #333333;
+	background-color: #ffffff;
+}
+
+p { 
+	margin: 0 0 10px 0; 
+	font-size: 22px;
+}
+
+a, a:visited, a:hover, a:active  {
+	color: inherit;
+	background-color: #ffffff;
+}
+
+
+.credit {
+	font-size: 12px;
+}
+
+a { text-decoration: none;}
+a:hover { } 
+
+a, img {
+	border:none;
+}
+	a { text-decoration: none;}
+	a:hover { } 
+
+	a, img {
+		border:none;
+	}
+
+h1 {
+	font-weight: 700;
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 1;	
+	margin: 0px;
+}
+
+h2 a {
+	color: #333333;
+	background-color: #ffffff;
+}
+
+h3 {
+	font-weight: 400;
+	font-style: italic;
+	line-height: 1.2;
+	font-size: 32px;
+}
+
+h4 {
+	font-weight: 700;
+	font-size: 28px;
+}
+
+.post_title {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 1.1;	
+	margin: 0px;
+}
