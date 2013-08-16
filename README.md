@@ -9,4 +9,5 @@ Screenshot:
 
 
 Thanks:
-<a href="http://www.roberthorvick.com/2013/06/28/a-minimal-wordpress-theme-inspired-loosely-by-medium-com/">Robert Horvick</a>
+<p><a href="http://www.roberthorvick.com/2013/06/28/a-minimal-wordpress-theme-inspired-loosely-by-medium-com/">Robert Horvick</a></p>
+<p><a href="http://jscrollpane.kelvinluck.com"></a>jScrollPane</p>
