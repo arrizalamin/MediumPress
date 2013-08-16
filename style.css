@@ -296,9 +296,9 @@ li {
 
 #searchform>input {
 	border:1px solid #232322 !important;
-	border-radius:2px;
-	width: 200px;
-	line-height: 10px;
+	border-radius:3px;
+	width: 180px;
+	line-height: 17px;
 	padding: 5px;
 	color: #232322;
 	font-size: 15px;
@@ -311,7 +311,6 @@ li {
 
 #nav {
 	height: 100%;
-	display: none;
 	position: fixed;
 	left: 0;
 	width: 280px;
@@ -343,7 +342,7 @@ li {
 	font-weight: 400;
 }
 
-.nav-list-item-btn {
+.nav-list-item-btn, .nav-list-item-btn:visited {
 	line-height: 46px;
 	color: #b3b3b1;
 	background-color: #232322;
@@ -351,6 +350,11 @@ li {
 	display: block;
 	padding: 0 16px 0 22px;
 	height: 43px;
+}
+
+.nav-list-item-btn:hover {
+	color: white;
+	background-color: rgb(60, 60, 60);
 }
 
 span[class*="icon-"] {

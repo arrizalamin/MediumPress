@@ -15,6 +15,20 @@
 	</div>
 </div>
 	<?php if(is_single()): ?>
+
+	<script type="text/javascript" src="http://jscrollpane.kelvinluck.com/script/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="http://jscrollpane.kelvinluck.com/script/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript">
+		$(function()
+		{
+			$('#nav').jScrollPane();
+			$('.jspVerticalBar, .jspTrack').css('background', 'transparent');
+			$('.jspDrag').css({
+				'background': 'rgb(45, 45, 45)',
+				'border-radius': '16px'
+			});
+		});
+	</script>
 	<script type="text/javascript">
 		$('.entry>p, .entry>h1, .entry>h2, .entry>h3, .entry>h4, .entry>h5, .entry>h6, .entry>img').each(function(){
 			$(this).prepend('<span class="icon-comment-fill"></span>');

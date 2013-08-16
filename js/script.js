@@ -11,17 +11,15 @@ $(document).ready(function(){
 	var comment_form = $("#commentform");
 	
 	function open_nav() { 
-		nav.show(100,function(){
-			pagebody.delay(200).animate({
-				left: "280px"
-			}, 300, function(){
-				nav.css('z-index', 1)
-			});
-			button.animate({
-			    top: "-30px"
-			}, { duration: 300, queue: false });
-			button.fadeOut('fast');
+		pagebody.delay(200).animate({
+			left: "280px"
+		}, 300, function(){
+			nav.css('z-index', 1)
 		});
+		button.animate({
+		    top: "-30px"
+		}, { duration: 300, queue: false });
+		button.fadeOut('fast');
 	};
 	
 	function close_nav() {
@@ -29,7 +27,6 @@ $(document).ready(function(){
 		pagebody.animate({
 	        left: "0px"
 	    }, 180, function(){
-			nav.hide();
 			button.animate({
 		        top: "10px"
 		    }, { duration: 180, queue: false });
