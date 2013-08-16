@@ -12,16 +12,16 @@
 
 <?php if ( have_comments() ) : ?>
 	
-	<h2 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?></h2>
-
 	<div class="navigation">
 		<div class="next-posts"><?php previous_comments_link() ?></div>
 		<div class="prev-posts"><?php next_comments_link() ?></div>
 	</div>
 
 	<ul class="commentlist" style="list-style:none;">
-		<?php wp_list_comments('type=comment&avatar_size=30'); ?>
+		<?php wp_list_comments('type=comment&max_depth=2&callback=mediumpress_comment'); ?>
 	</ul>
+
+	<p id="comment-toggle" style="font-size:15px;cursor:pointer;margin-top:15px;">Leave a comment for <?php the_author_posts_link(); ?></p>
 
 	<div class="navigation">
 		<div class="next-posts"><?php previous_comments_link() ?></div>
@@ -44,50 +44,54 @@
 
 <div id="respond">
 
-	<h2><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></h2>
-
-	<div class="cancel-comment-reply">
-		<?php cancel_comment_reply_link(); ?>
-	</div>
-
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
 		<p>You must be <a href="<?php echo wp_login_url( get_permalink() ); ?>">logged in</a> to post a comment.</p>
 	<?php else : ?>
 
-	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform" <?php echo (have_comments())?' style="display:none;margin-top:15px;"':"" ?>>
 
 		<?php if ( is_user_logged_in() ) : ?>
 
-			<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out &raquo;</a></p>
+			<p><a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo get_avatar( get_the_author_meta( 'ID' ),20 ); ?> <?php echo $user_identity; ?></a></p>
 
 		<?php else : ?>
-
+			<div id="comment1">
 			<div>
-				<input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
-				<label for="author">Name <?php if ($req) echo "(required)"; ?></label>
+				<input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" placeholder="Name" <?php if ($req) echo "aria-required='true'"; ?> />
 			</div>
 
 			<div>
-				<input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-				<label for="email">Mail (will not be published) <?php if ($req) echo "(required)"; ?></label>
+				<input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" placeholder="Email" <?php if ($req) echo "aria-required='true'"; ?> />
 			</div>
 
 			<div>
-				<input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
-				<label for="url">Website</label>
+				<input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="29" tabindex="3" placeholder="URL" />
+			</div>
+
+			<div style="font-size: 12px;color: #8B8B8B;">
+				<a class="nav-form-comment" href="#">Next</a>
+				<?php cancel_comment_reply_link('Cancel Reply'); ?>
+			</div>
 			</div>
 
 		<?php endif; ?>
 
 		<!--<p>You can use these tags: <code><?php echo allowed_tags(); ?></code></p>-->
+		<div id="comment2"<?php echo (!is_user_logged_in())?' style="display:none;"':"" ?>>
+		<?php if ( !is_user_logged_in() ) : ?>
+		<p id="pic-and-name"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/no-pic.png" width="20px"> <span id="my-name"></span></p>
+		<?php endif; ?>
 
 		<div>
-			<textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea>
+			<textarea name="comment" id="comment" cols="58" rows="1" tabindex="4" placeholder="Leave a comment"></textarea>
 		</div>
 
 		<div>
-			<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+			<input name="submit" type="submit" id="submit" tabindex="5" value="Publish" style="border: 0px;background: transparent;font-size: 12px;color: #8B8B8B;cursor: pointer;float: left;font-weight: bolder;" />
 			<?php comment_id_fields(); ?>
+		</div>
+
+		<?php echo (!is_user_logged_in())?'<div><a class="nav-form-comment" href="#" style="font-size: 12px;color: #8B8B8B;">Back</a></div>':"" ?>
 		</div>
 		
 		<?php do_action('comment_form', $post->ID); ?>

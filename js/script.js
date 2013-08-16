@@ -7,6 +7,8 @@ $(document).ready(function(){
 	var bubble = $(".icon-comment-fill");
 	var search_icon = $(".search-icon");
 	var search_form = $("#nav-list-search");
+	var comment_toggle = $("#comment-toggle, .comment-reply-link");
+	var comment_form = $("#commentform");
 	
 	function open_nav() { 
 		nav.show(100,function(){
@@ -57,6 +59,11 @@ $(document).ready(function(){
 	    bubble.fadeIn('slow');
 	}
 
+	function open_form() {
+		comment_form.slideDown('slow');
+		comment_toggle.fadeOut('fast');
+	}
+
 	button.live("click", function(e){
 		e.preventDefault();
 		var leftval = pagebody.css('left');
@@ -78,15 +85,18 @@ $(document).ready(function(){
 
 	pagebody.live("click", function(){
 		var leftval = pagebody.css('left');
-		var leftval2 = pagecontent.css('left');
 
 		if(leftval == "280px") {
 			close_nav();
 		}
-		if(leftval2 == "-50%") {
+	});
+
+	pagecontent.live("click", function(){
+		var leftval = pagecontent.css('left');
+		if(leftval == "-50%") {
 			close_comment();
 		}
-	});
+	})
 
 	search_icon.live("click", function(){
 		if(search_form.css('display') == "none"){
@@ -94,5 +104,9 @@ $(document).ready(function(){
 		} else {
 			$("form[id=searchform]").submit();
 		}
+	});
+
+	comment_toggle.click(function(){
+		open_form();
 	});
 });

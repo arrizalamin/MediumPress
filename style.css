@@ -326,6 +326,17 @@ li {
 	background-color: white;
 }
 
+#author, #email, #url, #comment {
+	font-size: 16px;
+	outline: 0;
+	border: none;
+	width: 100%;
+}
+
+.children {
+	margin: 7px 0 0 20px;
+}
+
 .nav-list {
 	margin-top: 30px;
 	position: relative;

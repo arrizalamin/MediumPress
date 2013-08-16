@@ -54,8 +54,8 @@
 									<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
 									<?php wp_head(); ?>
-									<script type="text/javascript" src="https://raw.github.com/garand/sticky/master/jquery.sticky.js"></script>
 									<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/script.js"></script>
+									<script type="text/javascript" src="<?php echo (is_single())?bloginfo('template_url')."/js/comment.js":"" ?>"></script>
 									<!--[if lte IE 7]><script src="<?php bloginfo('template_url'); ?>/icomoon/lte-ie7.js"></script><![endif]-->
 								</head>
 
