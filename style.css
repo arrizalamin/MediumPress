@@ -257,17 +257,16 @@ body {
 	position: relative;
 }
 
-.icon-comment-fill {
+.comment-count {
 	float: right;
-	color: #232322;
-	padding: 0 8px 0 8px;
-	margin-top: -20px;
+	color: white;
+	padding: 0 16px 0 16px;
 	opacity: .2;
 	font-size: 25px;
 	cursor: pointer;
 }
 
-.icon-comment-fill:hover {
+.comment-count:hover {
 	opacity: 1;
 }
 

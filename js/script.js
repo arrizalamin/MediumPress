@@ -4,7 +4,7 @@ $(document).ready(function(){
 	var button = $("a#nav-toggle");
 	var nav = $("#nav");
 	var comment = $("#comment-sidebar");
-	var bubble = $(".icon-comment-fill");
+	var bubble = $(".comment-count");
 	var search_icon = $(".search-icon");
 	var search_form = $("#nav-list-search");
 	var comment_toggle = $("#comment-toggle, .comment-reply-link");

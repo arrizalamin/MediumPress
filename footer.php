@@ -31,7 +31,7 @@
 	</script>
 	<script type="text/javascript">
 		$('.entry>p, .entry>h1, .entry>h2, .entry>h3, .entry>h4, .entry>h5, .entry>h6, .entry>img').each(function(){
-			$(this).prepend('<span class="icon-comment-fill"></span>');
+			$(this).prepend('<div class="comment-count" style="background:url(<?php bloginfo('template_url') ?>/images/bubble.png) no-repeat center bottom;"><p style="text-align:center;line-height:1;"><?php comments_number('+',1,'%') ?></p></div>');
 		});
 	</script>
 	<script type="text/javascript">

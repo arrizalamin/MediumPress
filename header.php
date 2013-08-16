@@ -67,23 +67,6 @@
 											<li id="nav-list-search"><form action="<?php bloginfo('siteurl'); ?>" class="nav-list-item-btn" id="searchform" method="get"><input type="text" id="s" name="s" value="" /></form></li>
 											<li><a href="<?php echo home_url() ?>" class="nav-list-item-btn"><span class="icon-home"></span>Home</a></li>
 											<?php echo !empty($aboutme)?'<li><a href="'.get_permalink($aboutme).'" class="nav-list-item-btn"><span class="icon-profile"></span>About Me</a></li>':"" ?>
-											<li><a href="<?php echo home_url() ?>" class="nav-list-item-btn"><span class="icon-home"></span>Home</a></li>
-											<li><a href="<?php echo home_url() ?>" class="nav-list-item-btn"><span class="icon-home"></span>Home</a></li>
-											<li><a href="<?php echo home_url() ?>" class="nav-list-item-btn"><span class="icon-home"></span>Home</a></li>
-											<li><a href="<?php echo home_url() ?>" class="nav-list-item-btn"><span class="icon-home"></span>Home</a></li>
-											<li><a href="<?php echo home_url() ?>" class="nav-list-item-btn"><span class="icon-home"></span>Home</a></li>
-											<li><a href="<?php echo home_url() ?>" class="nav-list-item-btn"><span class="icon-home"></span>Home</a></li>
-											<li><a href="<?php echo home_url() ?>" class="nav-list-item-btn"><span class="icon-home"></span>Home</a></li>
-											<li><a href="<?php echo home_url() ?>" class="nav-list-item-btn"><span class="icon-home"></span>Home</a></li>
-											<li><a href="<?php echo home_url() ?>" class="nav-list-item-btn"><span class="icon-home"></span>Home</a></li>
-											<li><a href="<?php echo home_url() ?>" class="nav-list-item-btn"><span class="icon-home"></span>Home</a></li>
-											<li><a href="<?php echo home_url() ?>" class="nav-list-item-btn"><span class="icon-home"></span>Home</a></li>
-											<li><a href="<?php echo home_url() ?>" class="nav-list-item-btn"><span class="icon-home"></span>Home</a></li>
-											<li><a href="<?php echo home_url() ?>" class="nav-list-item-btn"><span class="icon-home"></span>Home</a></li>
-											<li><a href="<?php echo home_url() ?>" class="nav-list-item-btn"><span class="icon-home"></span>Home</a></li>
-											<li><a href="<?php echo home_url() ?>" class="nav-list-item-btn"><span class="icon-home"></span>Home</a></li>
-											<li><a href="<?php echo home_url() ?>" class="nav-list-item-btn"><span class="icon-home"></span>Home</a></li>
-											<li><a href="<?php echo home_url() ?>" class="nav-list-item-btn"><span class="icon-home"></span>Home</a></li>
 										</ul>
 									</div>
 
