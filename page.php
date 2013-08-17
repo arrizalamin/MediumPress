@@ -40,13 +40,6 @@ if(function_exists('ot_get_option')){
 				<div class="author-picture"><?php echo get_avatar( get_the_author_meta( 'ID' ),73 ); ?></div>
 				<div class="author-name"><?php the_author_posts_link(); ?></div>
 				<div class="author-bio"><?php the_author_meta('description') ?></div>
-				<div class="author-social">
-					<ul>
-						<li><a href="<?php echo $facebook ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/facebook_circle_gray32x32.png" width="32" height="32" alt="Facebook"/></a></li>
-						<li><a href="<?php echo $gplus ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/google_circle_gray32x32.png" width="32" height="32" alt="Google+"/></a></li>
-						<li><a href="http://twitter.com/<?php echo $twitter ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/twitter_circle_gray32x32.png" width="32" height="32" alt="Twitter"/></a></li>
-					</ul>
-				</div>
 
 
 

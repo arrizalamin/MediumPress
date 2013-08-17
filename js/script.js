@@ -44,7 +44,6 @@ $(document).ready(function(){
 				'z-index': 1,
 				'margin-top': top
 			});
-			bubble.fadeOut('slow');
 		});
 	}
 
@@ -53,7 +52,7 @@ $(document).ready(function(){
 		pagecontent.css('margin', '0 auto').animate({
 	        'left': "0px"
 	    }, 180);
-	    bubble.fadeIn('slow');
+	    $(".bubble-clicked").removeClass('bubble-clicked');
 	}
 
 	function open_form() {
@@ -75,6 +74,7 @@ $(document).ready(function(){
 		var leftval = pagebody.css('left');
 		var position = $(this).offset();
 
+		$(this).addClass('bubble-clicked');
 		if(leftval == "0px"){
 			open_comment(position.top);
 		}
