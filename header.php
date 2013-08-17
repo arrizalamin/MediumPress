@@ -65,9 +65,9 @@
 										<ul class="nav-list">
 											<li><span class="icon-search search-icon"></span></li>
 											<li id="nav-list-search"><form action="<?php bloginfo('siteurl'); ?>" id="searchform" method="get"><input type="text" id="s" name="s" value="" /></form></li>
-											<li><a href="<?php echo home_url() ?>" <span class="icon-home"></span>Home</a></li>
+											<li><a href="<?php echo home_url() ?>" ><span class="icon-home"></span>Home</a></li>
 											<?php
-												echo !empty($aboutme)?'<li><a href="'.get_permalink($aboutme).'" <span class="icon-profile"></span>About Me</a></li>':"" ;
+												echo !empty($aboutme)?'<li><a href="'.get_permalink($aboutme).'" ><span class="icon-profile"></span>About Me</a></li>':"" ;
 												$defaults = array(
 													  'theme_location'  => 'sidebar-menu',
 													  'container'       => '',
