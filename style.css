@@ -228,7 +228,16 @@ li {
 #nav-list-search {
 	display: none;
 }
-	#searchform>input {
+#searchform {
+	line-height: 46px;
+	color: #b3b3b1;
+	background-color: #232322;
+	font-weight: 700;
+	display: block;
+	padding: 0 16px 0 22px;
+	height: 43px;
+}
+#searchform>input {
 	border:1px solid #232322 !important;
 	border-radius:3px;
 	width: 180px;
@@ -237,18 +246,18 @@ li {
 	color: #232322;
 	font-size: 15px;
 }
-#nav, #comment-sidebar {
-	top: 0;
-	z-index: -1;
-}
 #nav {
 	height: 100%;
 	position: fixed;
-	left: 0;
+	left: -280px;
 	width: 280px;
 	background-color: #232322;
+	z-index: 1;
+	top: 0;
 }
 #comment-sidebar {
+	top: 0;
+	z-index: -1;
 	display: block;
 	position: absolute;
 	right: 0;
@@ -269,7 +278,7 @@ li {
 	position: relative;
 	font-weight: 400;
 }
-.nav-list-item-btn, .nav-list-item-btn:visited {
+.nav-list a, .nav-list a:visited {
 	line-height: 46px;
 	color: #b3b3b1;
 	background-color: #232322;
@@ -278,7 +287,7 @@ li {
 	padding: 0 16px 0 22px;
 	height: 43px;
 }
-.nav-list-item-btn:hover {
+.nav-list a:hover {
 	color: white;
 	background-color: rgb(60, 60, 60);
 }

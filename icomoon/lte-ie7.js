@@ -41,8 +41,7 @@ window.onload = function() {
 			'icon-profile' : '&#xe020;',
 			'icon-file' : '&#xe021;',
 			'icon-bookmark' : '&#xe022;',
-			'icon-search' : '&#xe023;',
-			'icon-comment-fill' : '&#xe024;'
+			'icon-search' : '&#xe023;'
 		},
 		els = document.getElementsByTagName('*'),
 		i, attr, html, c, el;

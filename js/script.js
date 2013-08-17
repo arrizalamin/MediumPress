@@ -11,11 +11,12 @@ $(document).ready(function(){
 	var comment_form = $("#commentform");
 	
 	function open_nav() { 
+		nav.delay(200).animate({
+			left: "0px"
+		}, 300);
 		pagebody.delay(200).animate({
 			left: "280px"
-		}, 300, function(){
-			nav.css('z-index', 1)
-		});
+		}, 300);
 		button.animate({
 		    top: "-30px"
 		}, { duration: 300, queue: false });
@@ -23,10 +24,12 @@ $(document).ready(function(){
 	};
 	
 	function close_nav() {
-		nav.css('z-index', -1);
 		pagebody.animate({
 	        left: "0px"
-	    }, 180, function(){
+	    }, 180);
+		nav.animate({
+			left: "-280px"
+		}, 180, function(){
 			button.animate({
 		        top: "10px"
 		    }, { duration: 180, queue: false });

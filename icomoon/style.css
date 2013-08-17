@@ -27,7 +27,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-home, .icon-address-book, .icon-envelop, .icon-location, .icon-facebook, .icon-twitter, .icon-instagram, .icon-google-plus, .icon-mail, .icon-feed, .icon-youtube, .icon-vimeo, .icon-flickr, .icon-picassa, .icon-dribbble, .icon-forrst, .icon-deviantart, .icon-github, .icon-wordpress, .icon-blogger, .icon-tumblr, .icon-skype, .icon-reddit, .icon-linkedin, .icon-lastfm, .icon-delicious, .icon-pinterest, .icon-foursquare, .icon-paypal, .icon-yelp, .icon-pencil, .icon-image, .icon-profile, .icon-file, .icon-bookmark, .icon-search, .icon-comment-fill {
+.icon-home, .icon-address-book, .icon-envelop, .icon-location, .icon-facebook, .icon-twitter, .icon-instagram, .icon-google-plus, .icon-mail, .icon-feed, .icon-youtube, .icon-vimeo, .icon-flickr, .icon-picassa, .icon-dribbble, .icon-forrst, .icon-deviantart, .icon-github, .icon-wordpress, .icon-blogger, .icon-tumblr, .icon-skype, .icon-reddit, .icon-linkedin, .icon-lastfm, .icon-delicious, .icon-pinterest, .icon-foursquare, .icon-paypal, .icon-yelp, .icon-pencil, .icon-image, .icon-profile, .icon-file, .icon-bookmark, .icon-search {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -144,7 +144,4 @@ you can use the generic selector below, but it's slower:
 }
 .icon-search:before {
 	content: "\e023";
-}
-.icon-comment-fill:before {
-	content: "\e024";
 }

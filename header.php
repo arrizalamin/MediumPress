@@ -64,9 +64,22 @@
 									<div id="nav">
 										<ul class="nav-list">
 											<li><span class="icon-search search-icon"></span></li>
-											<li id="nav-list-search"><form action="<?php bloginfo('siteurl'); ?>" class="nav-list-item-btn" id="searchform" method="get"><input type="text" id="s" name="s" value="" /></form></li>
-											<li><a href="<?php echo home_url() ?>" class="nav-list-item-btn"><span class="icon-home"></span>Home</a></li>
-											<?php echo !empty($aboutme)?'<li><a href="'.get_permalink($aboutme).'" class="nav-list-item-btn"><span class="icon-profile"></span>About Me</a></li>':"" ?>
+											<li id="nav-list-search"><form action="<?php bloginfo('siteurl'); ?>" id="searchform" method="get"><input type="text" id="s" name="s" value="" /></form></li>
+											<li><a href="<?php echo home_url() ?>" <span class="icon-home"></span>Home</a></li>
+											<?php
+												echo !empty($aboutme)?'<li><a href="'.get_permalink($aboutme).'" <span class="icon-profile"></span>About Me</a></li>':"" ;
+												$defaults = array(
+													  'theme_location'  => 'sidebar-menu',
+													  'container'       => '',
+													  'echo'            => true,
+													  'fallback_cb'     => 'wp_page_menu',
+													  'menu_class'		=> 'nav-list-item-btn',
+													  'link_before'     => '<span class="icon-file"></span>',
+													  'depth'           => 0,
+													  'walker'          => '',
+													  'items_wrap'		=> '%3$s');
+												wp_nav_menu( $defaults );
+											?>
 										</ul>
 									</div>
 

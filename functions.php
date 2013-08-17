@@ -1,5 +1,20 @@
 <?php
 	add_theme_support( 'post-thumbnails' );
+
+	function register_sidebar_menu() {
+	  register_nav_menu('sidebar-menu',__( 'Sidebar Menu' ));
+	}
+	add_action( 'init', 'register_sidebar_menu' );
+
+	// Filtering out some HTML and Code from the Nav
+	function wp_nav_menu_remove_attributes( $menu ){
+		$patterns = array('/ id=\"(.*)\" class=\"(.*)\"/iU');
+	    return $menu = preg_replace($patterns, '', $menu );
+	}
+	function add_menuclass($ulclass) {
+	return preg_replace('/<a/', '<a', $ulclass, 1);
+	}
+	add_filter( 'wp_nav_menu', 'wp_nav_menu_remove_attributes', 'add_menuclass');
 	
 	// Add RSS links to <head> section
 	automatic_feed_links();
