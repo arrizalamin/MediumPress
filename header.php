@@ -48,7 +48,7 @@
 
 									<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
 									<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/icomoon/style.css">
-									<link rel="stylesheet" type="text/css" href="http://jscrollpane.kelvinluck.com/style/jquery.jscrollpane.css">
+									<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url') ?>/css/jquery.jscrollpane.css">
 
 									<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
@@ -85,7 +85,7 @@
 
 
 									<div id="wrapper">
-										<a href="#nav" id="nav-toggle"><img src="<?php echo !empty($navicon)?$navicon:bloginfo('stylesheet_directory')."/images/navicon.png" ?>" style="width:30px;height:30px;"></a>
+										<a href="#nav" id="nav-toggle" class="do-not-print"><img src="<?php echo !empty($navicon)?$navicon:bloginfo('stylesheet_directory')."/images/navicon.png" ?>" style="width:30px;height:30px;"></a>
 
 										<?php if (!is_single() && !is_page()) {
 											echo (is_search())?'<div id="page-wrap" style="min-height:700px;">':'<div id="page-wrap">';

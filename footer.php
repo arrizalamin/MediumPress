@@ -6,7 +6,7 @@
 
 		</div> <!-- page wrap -->
 
-			<?php (is_single())?include_once(TEMPLATEPATH . '/disqus.php' ):"" ?>
+			<?php (is_single())?include_once(TEMPLATEPATH . '/comment-template.php' ):"" ?>
 	</div>
 
 		<?php wp_footer(); ?>
@@ -16,8 +16,8 @@
 </div>
 	<?php if(is_single()): ?>
 
-	<script type="text/javascript" src="http://jscrollpane.kelvinluck.com/script/jquery.mousewheel.js"></script>
-	<script type="text/javascript" src="http://jscrollpane.kelvinluck.com/script/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/jquery.jscrollpane.min.js"></script>
 	<script type="text/javascript">
 		$(function()
 		{

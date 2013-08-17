@@ -21,15 +21,14 @@ License URI: http://opensource.org/licenses/MIT and http://www.gnu.org/licenses/
 		display: block;
 		overflow: hidden;
 	}
-	.author-picture {
-		float: left;
-		margin-right: 10px;;
-	}
 	.author-bio {
 		font-size: 14px;
 		font-weight: 400;
 		color: #818181;
 		background-color: #ffffff;
+	}
+	.author-name {
+		text-align: left !important;
 	}
 	.hratas {
 		display: none;
@@ -52,17 +51,6 @@ License URI: http://opensource.org/licenses/MIT and http://www.gnu.org/licenses/
 		width: 170px;
 		margin-top: 10px;
 	}
-	.author-name {
-		float: right;
-		min-width: 58px;
-	}
-	.author-picture {
-		float: left;
-		display: block;
-		min-width: 100%;
-		margin-left: auto;
-		margin-right: auto
-	}
 	.author-picture>img {
 		float: right;
 	}
@@ -75,6 +63,11 @@ License URI: http://opensource.org/licenses/MIT and http://www.gnu.org/licenses/
 		font-weight: 400;
 		text-align: right;
 		background-color: #ffffff;
+		margin-bottom: 10px;
+	}
+	.post-date {
+		font-size: 13px;
+		text-align: right;
 	}
 	.hrbawah {
 		display: none;
@@ -95,7 +88,6 @@ License URI: http://opensource.org/licenses/MIT and http://www.gnu.org/licenses/
 	.clear { clear: both; }
 	.group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
 	* html .group, *:first-child+html .group { zoom: 1; } /* First selector = IE6, Second Selector = IE 7 */
-
 	.fn, .says {
 		font-size: 30px;
 	}
@@ -118,8 +110,7 @@ License URI: http://opensource.org/licenses/MIT and http://www.gnu.org/licenses/
 
 
 @media print {
-	.do-not-print { display: none; }
-	#comments { page-break-before: always; }
+	.do-not-print, .bio, .postmetadata { display: none; }
 	body { 
 		width: 100% !important; 
 		margin: 0 !important; 
@@ -139,12 +130,6 @@ License URI: http://opensource.org/licenses/MIT and http://www.gnu.org/licenses/
 	.clear { clear: both; }
 	.group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
 	* html .group, *:first-child+html .group { zoom: 1; } /* First selector = IE6, Second Selector = IE 7 */
-	.disqus_comments {
-		display: none;
-	}
-	#top-menu {
-		display: none;
-	}
 	#page-wrap { 
 		margin: 0 auto;
 		line-height: 1.4;
@@ -164,14 +149,15 @@ License URI: http://opensource.org/licenses/MIT and http://www.gnu.org/licenses/
 		font-size: 32px;
 		line-height: 1.1;	
 	}
-	#top-menu {
-		display: none;
-	}
-	.bio {
-		display: none;
-	}
 } /* END print media */
 
+.author-picture {
+	float: left;
+	display: block;
+	min-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
 .author-name {
 	font-family: "Droid Sans","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
 	display: block;
@@ -179,6 +165,8 @@ License URI: http://opensource.org/licenses/MIT and http://www.gnu.org/licenses/
 	font-weight: 700;
 	color: #333332;
 	line-height: 1.2;
+	min-width: 100%;
+	text-align: right;
 }
 .author-bio {
 	font-family: "Droid Serif",Georgia,Cambria,"Times New Roman",Times,serif;

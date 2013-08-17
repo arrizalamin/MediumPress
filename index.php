@@ -27,7 +27,6 @@ if(function_exists('ot_get_option')){
 
 			<div class="postmetadata">
 				<?php the_tags('Tags: ', ', ', '<br />'); ?>
-				Posted in <?php the_category(', ') ?>
 				<hr class="hratas"/>
 			</div>
 		</div>
@@ -35,6 +34,7 @@ if(function_exists('ot_get_option')){
 			<div class="author-picture"><?php echo get_avatar( get_the_author_meta( 'ID' ),73 ); ?></div>
 			<div class="author-name"><?php the_author_posts_link(); ?></div>
 			<div class="author-bio"><?php the_author_meta('description') ?></div>
+			<div class="post-date"><span style="font-weight:bold;"><?php echo (get_the_modified_time() != get_the_time())?"Updated</span><br />".get_the_modified_time('F j, Y'):"Posted: ".get_the_time('F j, Y') ?></div>
 		</div>
 		<hr class="hrbawah"/>
 
