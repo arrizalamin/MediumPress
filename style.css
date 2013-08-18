@@ -319,8 +319,9 @@ span[class*="icon-"] {
 	font-weight: 400;
 }
 .entry img {
-	width: 100%;
-	height: 100%;
+	padding-left: 5%;
+	width: 90%;
+	height: 90%;
 }
 .meta {
 	display: inline;
