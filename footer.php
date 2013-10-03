@@ -1,5 +1,5 @@
 			</div> <!-- clear -->
-			</div>
+			<?php echo (!is_home())?'</div>':'' ?>
 			<div id="footer">
 				&copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?>
 			</div>

@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	var pagebody = $("#wrapper");
 	var pagecontent = $("#page-wrap");
+	var cover = $("#cover-body");
 	var button = $("a#nav-toggle");
 	var nav = $("#nav");
 	var comment = $("#comment-sidebar");
@@ -14,6 +15,9 @@ $(document).ready(function(){
 		nav.delay(200).animate({
 			left: "0px"
 		}, 300);
+		cover.delay(200).animate({
+			left: "280px"
+		}, 300),
 		pagebody.delay(200).animate({
 			left: "280px"
 		}, 300);
@@ -24,6 +28,9 @@ $(document).ready(function(){
 	};
 	
 	function close_nav() {
+		cover.animate({
+			left: "0px"
+		}, 200),
 		pagebody.animate({
 	        left: "0px"
 	    }, 180);

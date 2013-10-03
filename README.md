@@ -4,8 +4,9 @@ MediumPress
 A WordPress Theme Inspired by Medium.com
 
 Screenshot:
-<p><img src="https://dl.dropboxusercontent.com/u/87401351/MediumPress/Screenshot-1.png" width="600px" /></p>
-<p><img src="https://dl.dropboxusercontent.com/u/87401351/MediumPress/Screenshot-2.png" width="600px" /></p>
+<p><img src="https://dl.dropboxusercontent.com/u/87401351/MediumPress/Screenshot-1.jpg" width="600px" /></p>
+<p><img src="https://dl.dropboxusercontent.com/u/87401351/MediumPress/Screenshot-2.jpg" width="600px" /></p>
+<p><img src="https://dl.dropboxusercontent.com/u/87401351/MediumPress/Screenshot-3.jpg" width="600px" /></p>
 
 
 Thanks:

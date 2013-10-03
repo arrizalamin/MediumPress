@@ -12,7 +12,20 @@ License URI: http://opensource.org/licenses/MIT and http://www.gnu.org/licenses/
 */
 
 /* #### Mobile Phones Portrait #### */
+* {margin: 0;padding: 0}
+
 @media screen and (max-width: 960px) {
+	#cover {
+		position: relative !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		height: 500px;
+	}
+	#cover-body {
+		position: relative !important;
+		width: 100% !important;
+		height: 500px;
+	}
 	#page-wrap { 
 		width: 90%;
 	}
@@ -39,16 +52,16 @@ License URI: http://opensource.org/licenses/MIT and http://www.gnu.org/licenses/
 /* #### Desktops #### */
 @media screen and (min-width: 960px){
 	#page-wrap { 
-		width: 900px;
+		width: 70%;
 		overflow: hidden;
 	}
 	.post { 
-		width: 700px;
+		width: 73%;
 		float: right;
 	}
 	.bio {
 		float: left;
-		width: 170px;
+		width: 23%;
 		margin-top: 10px;
 	}
 	.author-picture>img {
@@ -102,7 +115,7 @@ License URI: http://opensource.org/licenses/MIT and http://www.gnu.org/licenses/
 		overflow: hidden;
 	}
 	#page-wrap { 
-		padding-top: 60px;
+		padding-top: 50px;
 		margin: 0 auto;
 		line-height: 1.4;
 	}
@@ -151,6 +164,13 @@ License URI: http://opensource.org/licenses/MIT and http://www.gnu.org/licenses/
 	}
 } /* END print media */
 
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	overflow: auto;
+}
 .author-picture {
 	float: left;
 	display: block;
@@ -178,10 +198,7 @@ License URI: http://opensource.org/licenses/MIT and http://www.gnu.org/licenses/
 	height: 537px;
 	left: 0;
 }
-	#page-wrap {
-	position: relative;
-}
-	.comment-count {
+.comment-count {
 	float: right;
 	color: white;
 	padding: 0 16px 0 16px;
@@ -190,7 +207,7 @@ License URI: http://opensource.org/licenses/MIT and http://www.gnu.org/licenses/
 	cursor: pointer;
 	visibility: hidden;
 }
-	.bubble-active, .comment-count:hover {
+.bubble-active, .comment-count:hover {
 	visibility: visible !important;
 	opacity: 1;
 }
@@ -282,7 +299,7 @@ li {
 span[class*="icon-"] {
 	margin-right: 20px;
 }
-	a#nav-toggle {
+a#nav-toggle {
 	width: 30px;
 	height: 30px;
 	padding: 5px;
@@ -292,17 +309,109 @@ span[class*="icon-"] {
 	background: #232322;
 	color: white;
 	font-weight: bolder;
+	z-index: 999;
 }
-	#wrapper {
+#wrapper {
 	position: relative;
 	top: 0;
 	left: 0;
 	display: block;
 	background-color: white;
+	min-height: 100%;
+}
+#page-wrap {
+	position: relative;
+}
+#cover {
+	position: absolute;
+	width: 40%;
+	max-width: 500px;
+	min-height: 100%;
+}
+#cover-body {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	width: 30%;
+	background-position: center;
+	background-size: cover;
+}
+#cover-body-inner {
+	position: absolute;
+	bottom: 10%;
+	padding: 0 10% 0 10%;
+}
+#cover-title {
+	font-size: 32px;
+	line-height: 1;
+	color: #fff;
+	margin-bottom: 12px;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+#cover-description {
+	font-size: 16px;
+	line-height: 1.2;
+	color: #fff;
+	margin-bottom: 14px;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+#cover-subscription {
+	padding-top: 20px;
+	margin-top: 20px;
+	border-top: 1px solid rgba(255,255,255,0.7);
+}
+.btn {
+	display: inline-block;
+	position: relative;
+	height: 40px;
+	padding: 0 20px;
+	border: 0;
+	color: #666665;
+	background-color: #dededc;
+	font-size: 14px;
+	line-height: 39px;
+	text-align: center;
+	text-decoration: none;
+	font-style: normal;
+	cursor: pointer;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	vertical-align: bottom;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	 -khtml-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+	user-select: none;
+	font-weight: 400;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+			border-radius: 3px;
+	-webkit-transition: all .1s ease;
+	   -moz-transition: all .1s ease;
+		-ms-transition: all .1s ease;
+		 -o-transition: all .1s ease;
+			transition: all .1s ease;
+}
+.btn:hover {
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(rgba(0,0,0,0.05)),to(rgba(0,0,0,0.05)));
+	background-image: -moz-linear-gradient(top,rgba(0,0,0,0.05),rgba(0,0,0,0.05));
+	background-image: -webkit-linear-gradient(top,rgba(0,0,0,0.05),rgba(0,0,0,0.05));
+	background-image: -o-linear-gradient(top,rgba(0,0,0,0.05),rgba(0,0,0,0.05));
+	background-image: linear-gradient(to bottom,rgba(0,0,0,0.05),rgba(0,0,0,0.05));
+	background-repeat: repeat-x;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 .index-box {
 	min-height: 100%;
 	height: 100%;
+	margin-bottom: 10px;
 }
 .entry {
 	font-family: "Droid Serif",Georgia,Cambria,"Times New Roman",Times,serif;
@@ -379,6 +488,9 @@ h3 {
 h4 {
 	font-weight: 700;
 	font-size: 28px;
+}
+.post {
+	margin-top: 10px;
 }
 .post_title {
 	font-weight: 700;

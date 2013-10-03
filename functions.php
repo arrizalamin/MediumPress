@@ -1,6 +1,7 @@
 <?php
 	add_theme_support( 'post-thumbnails' );
 
+
 	function register_sidebar_menu() {
 	  register_nav_menu('sidebar-menu',__( 'Sidebar Menu' ));
 	}
@@ -17,7 +18,7 @@
 	add_filter( 'wp_nav_menu', 'wp_nav_menu_remove_attributes', 'add_menuclass');
 	
 	// Add RSS links to <head> section
-	automatic_feed_links();
+	add_theme_support( 'automatic-feed-links' );
 	
 	// Load jQuery
 	if ( !is_admin() ) {
@@ -53,6 +54,11 @@
 			</div>
 	<?php
 	}
+
+	function custom_excerpt_length( $length ) {
+		return 15;
+	}
+	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 	function new_excerpt_more( $more ) {
 		return ' ...';
