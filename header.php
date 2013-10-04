@@ -48,10 +48,6 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url') ?>/css/jquery.jscrollpane.css">
 	<?php if(is_home()): ?>
 	<style type="text/css">
-	#page-wrap {
-		position: relative;
-		left: 3%;
-	}
 	@media screen and (max-width: 960px) {
 		#footer {
 			width: 98%;
@@ -105,8 +101,7 @@
 			<div id="cover-body" style="background-image:url('<?php bloginfo('template_url')?>/images/cover.jpg');">
 				<div id="cover-body-inner">
 					<h1 id="cover-title"><?php bloginfo('name') ?></h1>
-					<p id="cover-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+					<p id="cover-description"><?php bloginfo('description') ?></p>
 					<div id="cover-subscription">
 						<a class="btn" href="<?php bloginfo('rss2_url'); ?>" style="background-color:#57ad68;color:#fff;"><i class="icon-feed"></i> Subscribe via RSS</a>
 					</div>

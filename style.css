@@ -54,9 +54,6 @@ License URI: http://opensource.org/licenses/MIT and http://www.gnu.org/licenses/
 	#page-wrap { 
 		width: 70%;
 		overflow: hidden;
-	}
-	.post { 
-		width: 73%;
 		float: right;
 	}
 	.bio {
@@ -324,7 +321,7 @@ a#nav-toggle {
 }
 #cover {
 	position: absolute;
-	width: 40%;
+	width:30%;
 	max-width: 500px;
 	min-height: 100%;
 }
@@ -411,7 +408,8 @@ a#nav-toggle {
 .index-box {
 	min-height: 100%;
 	height: 100%;
-	margin-bottom: 10px;
+	width: 70%;
+	margin: 0 auto 10px;
 }
 .entry {
 	font-family: "Droid Serif",Georgia,Cambria,"Times New Roman",Times,serif;
