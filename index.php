@@ -15,8 +15,8 @@ if(function_exists('ot_get_option')){
 
 		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-			<div class="author-pucture">
-				<a href="#"><?php echo get_avatar(get_the_author_meta('ID'),50) ?></a>
+			<div class="author-pic">
+				<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>"><?php echo get_avatar(get_the_author_meta('ID'),50) ?></a>
 			</div>
 
 			<div class="post_title">

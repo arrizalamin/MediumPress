@@ -18,18 +18,6 @@ if(function_exists('ot_get_option')){
 	<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
 	<h2>Posts Tagged &#8216;<?php single_tag_title(); ?>&#8217;</h2>
 
-	<?php /* If this is a daily archive */ } elseif (is_day()) { ?>
-	<h2>Archive for <?php the_time('F jS, Y'); ?></h2>
-
-	<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-	<h2>Archive for <?php the_time('F, Y'); ?></h2>
-
-	<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-	<h2 class="pagetitle">Archive for <?php the_time('Y'); ?></h2>
-
-	<?php /* If this is an author archive */ } elseif (is_author()) { ?>
-	<h2 class="pagetitle">Stuff I Wrote</h2>
-
 	<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
 	<h2 class="pagetitle">Blog Archives</h2>
 	
@@ -39,27 +27,27 @@ if(function_exists('ot_get_option')){
 
 	<?php while (have_posts()) : the_post(); ?>
 	
-	<div <?php post_class() ?>>
-		
-		<h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-		
-		<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
+	<div class="index-box">
 
-		<div class="entry">
-			<?php the_content(); ?>
+
+		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+
+			<div class="author-pic">
+				<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>"><?php echo get_avatar(get_the_author_meta('ID'),50) ?></a>
+			</div>
+
+			<div class="post_title">
+				<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+			</div>
+
+			<div class="entry">
+				<?php the_excerpt(); ?>
+			</div>
+
+			<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
+
 		</div>
-		<div class="postmetadata">
-			<?php the_tags('Tags: ', ', ', '<br />'); ?>
-			<hr class="hratas"/>
-		</div>
-		</div>
-		<div class="bio">
-			<div class="author-picture"><?php echo get_avatar( get_the_author_meta( 'ID' ),73 ); ?></div>
-			<div class="author-name"><?php the_author_posts_link(); ?></div>
-			<div class="author-bio"><?php the_author_meta('description') ?></div>
-			<div class="post-date"><span style="font-weight:bold;"><?php echo (get_the_modified_time() != get_the_time())?"Updated</span><br />".get_the_modified_time('F j, Y'):"Posted: ".get_the_time('F j, Y') ?></div>
-		</div>
-		<hr class="hrbawah"/>
+	</div>
 
 <?php endwhile; ?>
 <div>
