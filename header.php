@@ -49,6 +49,10 @@
 	<?php if(is_home()): ?>
 	<style type="text/css">
 	@media screen and (min-width: 960px) {
+		img.avatar-50 {
+			float: right;
+			border-radius: 50%;
+		}
 		#page-wrap {
 			float: right;
 		}
