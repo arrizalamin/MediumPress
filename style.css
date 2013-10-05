@@ -54,6 +54,9 @@ License URI: http://opensource.org/licenses/MIT and http://www.gnu.org/licenses/
 	#page-wrap { 
 		width: 70%;
 		overflow: hidden;
+	}
+	.post { 
+		width: 73%;
 		float: right;
 	}
 	.bio {
@@ -166,7 +169,7 @@ html {
 }
 body {
 	height: 100%;
-	overflow: auto;
+	overflow-x: hidden;
 }
 .author-picture {
 	float: left;
@@ -321,8 +324,8 @@ a#nav-toggle {
 }
 #cover {
 	position: absolute;
-	width:30%;
-	max-width: 500px;
+	width: 30%;
+	max-width: 600px;
 	min-height: 100%;
 }
 #cover-body {
@@ -334,11 +337,13 @@ a#nav-toggle {
 	width: 30%;
 	background-position: center;
 	background-size: cover;
+	border-right: 1px solid rgba(0,0,0,.7);
 }
 #cover-body-inner {
 	position: absolute;
 	bottom: 10%;
 	padding: 0 10% 0 10%;
+	width: 80%;
 }
 #cover-title {
 	font-size: 32px;
@@ -408,8 +413,7 @@ a#nav-toggle {
 .index-box {
 	min-height: 100%;
 	height: 100%;
-	width: 70%;
-	margin: 0 auto 10px;
+	margin-bottom: 10px;
 }
 .entry {
 	font-family: "Droid Serif",Georgia,Cambria,"Times New Roman",Times,serif;

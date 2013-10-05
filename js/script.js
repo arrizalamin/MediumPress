@@ -30,7 +30,7 @@ $(document).ready(function(){
 	function close_nav() {
 		cover.animate({
 			left: "0px"
-		}, 200),
+		}, 180),
 		pagebody.animate({
 	        left: "0px"
 	    }, 180);

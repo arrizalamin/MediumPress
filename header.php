@@ -48,14 +48,21 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url') ?>/css/jquery.jscrollpane.css">
 	<?php if(is_home()): ?>
 	<style type="text/css">
-	@media screen and (max-width: 960px) {
-		#footer {
-			width: 98%;
+	@media screen and (min-width: 960px) {
+		#page-wrap {
+			float: right;
+		}
+		.index-box {
+			width: 70%;
+			margin: 0 auto;
+		}
+		.post {
+			width: 100%;
 		}
 	}
 	@media screen and (min-width: 960px) {
 		#footer {
-			width: 88%;
+			width: 85%;
 		}
 	}
 	</style>
