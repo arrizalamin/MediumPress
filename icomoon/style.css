@@ -1,0 +1,151 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot');
+	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.woff') format('woff'),
+		url('fonts/icomoon.ttf') format('truetype'),
+		url('fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-home, .icon-image, .icon-play, .icon-file, .icon-calendar, .icon-address-book, .icon-envelop, .icon-pencil, .icon-user, .icon-cog, .icon-location, .icon-search, .icon-bookmark, .icon-link, .icon-facebook, .icon-twitter, .icon-google-plus, .icon-feed, .icon-vimeo, .icon-flickr, .icon-picassa, .icon-dribbble, .icon-forrst, .icon-deviantart, .icon-github, .icon-tumblr, .icon-soundcloud, .icon-reddit, .icon-linkedin, .icon-lastfm, .icon-delicious, .icon-stumbleupon, .icon-pinterest, .icon-foursquare, .icon-paypal, .icon-chevron-left, .icon-chevron-right {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-home:before {
+	content: "\e000";
+}
+.icon-image:before {
+	content: "\e001";
+}
+.icon-play:before {
+	content: "\e002";
+}
+.icon-file:before {
+	content: "\e003";
+}
+.icon-calendar:before {
+	content: "\e005";
+}
+.icon-address-book:before {
+	content: "\e006";
+}
+.icon-envelop:before {
+	content: "\e007";
+}
+.icon-pencil:before {
+	content: "\e008";
+}
+.icon-user:before {
+	content: "\e009";
+}
+.icon-cog:before {
+	content: "\e00a";
+}
+.icon-location:before {
+	content: "\e00b";
+}
+.icon-search:before {
+	content: "\e00c";
+}
+.icon-bookmark:before {
+	content: "\e004";
+}
+.icon-link:before {
+	content: "\e00d";
+}
+.icon-facebook:before {
+	content: "\e00e";
+}
+.icon-twitter:before {
+	content: "\e010";
+}
+.icon-google-plus:before {
+	content: "\e00f";
+}
+.icon-feed:before {
+	content: "\e011";
+}
+.icon-vimeo:before {
+	content: "\e012";
+}
+.icon-flickr:before {
+	content: "\e013";
+}
+.icon-picassa:before {
+	content: "\e014";
+}
+.icon-dribbble:before {
+	content: "\e015";
+}
+.icon-forrst:before {
+	content: "\e016";
+}
+.icon-deviantart:before {
+	content: "\e017";
+}
+.icon-github:before {
+	content: "\e018";
+}
+.icon-tumblr:before {
+	content: "\e019";
+}
+.icon-soundcloud:before {
+	content: "\e01a";
+}
+.icon-reddit:before {
+	content: "\e01b";
+}
+.icon-linkedin:before {
+	content: "\e01c";
+}
+.icon-lastfm:before {
+	content: "\e01d";
+}
+.icon-delicious:before {
+	content: "\e01e";
+}
+.icon-stumbleupon:before {
+	content: "\e01f";
+}
+.icon-pinterest:before {
+	content: "\e020";
+}
+.icon-foursquare:before {
+	content: "\e021";
+}
+.icon-paypal:before {
+	content: "\e022";
+}
+.icon-chevron-left:before {
+	content: "\f053";
+}
+.icon-chevron-right:before {
+	content: "\f054";
+}

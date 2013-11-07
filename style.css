@@ -1,0 +1,433 @@
+/*
+Theme Name: MediumPress
+Theme URI: http://www.arrizalamin.com/
+Description: A WordPress Theme Inspired by Medium.com
+Author: Arrizal Amin
+Author URI: http://www.arrizalamin.com/
+Version: 1.0
+
+License: Dual licensed under the MIT and GPL licenses
+License URI: http://opensource.org/licenses/MIT and http://www.gnu.org/licenses/gpl.html
+
+*/
+
+/* #### Mobile Phones Portrait #### */
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	overflow-x: hidden;
+	font-weight: 400;
+	color: #333332;
+	font-size: 18px;
+	line-height: 1.4;
+}
+a, a:visited, a:hover, a:active {
+	color: inherit;
+}
+ul, ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+ul.sub-menu {
+	margin-left: 15px;
+}
+li {
+	display: list-item;
+}
+.wrapper {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+#nav {
+	height: 100%;
+	position: fixed;
+	left: -280px;
+	width: 280px;
+	background: url('images/background-nav.png');
+	z-index: 1;
+	top: 0;
+}
+.search-icon {
+	margin-top: 12px;
+	color: #b3b3b1;
+	float: right;
+	cursor: pointer;
+}
+#nav-list-search {
+	display: none;
+}
+.searchform {
+	line-height: 46px;
+	color: #b3b3b1;
+	font-weight: 700;
+	display: block;
+	padding: 0 16px 0 22px;
+	height: 43px;
+}
+.searchform input {
+	border:1px solid #232322 !important;
+	border-radius:3px;
+	width: 180px;
+	line-height: 17px;
+	padding: 5px;
+	color: #232322;
+	font-size: 15px;
+}
+#cover {
+	position: absolute;
+	width: 30%;
+	max-width: 600px;
+	min-height: 100%;
+}
+.cover-body {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	width: 30%;
+	background-position: center;
+	background-size: cover;
+	border-right: 1px solid rgba(0,0,0,.7);
+}
+.cover-body-inner {
+	position: absolute;
+	bottom: 10%;
+	padding: 0 10% 0 10%;
+	width: 80%;
+}
+.cover-title {
+	font-size: 32px;
+	line-height: 1;
+	color: #fff;
+	margin-bottom: 12px;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+.cover-description {
+	font-size: 16px;
+	line-height: 1.2;
+	color: #fff;
+	margin-bottom: 14px;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+.cover-bottom {
+	padding-top: 20px;
+	margin-top: 20px;
+	border-top: 1px solid rgba(255,255,255,0.7);
+}
+.btn {
+	display: inline-block;
+	position: relative;
+	height: 40px;
+	padding: 0 20px;
+	border: 0;
+	color: #666665;
+	background-color: #dededc;
+	font-size: 14px;
+	line-height: 39px;
+	text-align: center;
+	text-decoration: none;
+	font-style: normal;
+	cursor: pointer;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	vertical-align: bottom;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	 -khtml-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+	user-select: none;
+	font-weight: 400;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+			border-radius: 3px;
+	-webkit-transition: all .1s ease;
+	   -moz-transition: all .1s ease;
+		-ms-transition: all .1s ease;
+		 -o-transition: all .1s ease;
+			transition: all .1s ease;
+}
+.btn:hover {
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(rgba(0,0,0,0.05)),to(rgba(0,0,0,0.05)));
+	background-image: -moz-linear-gradient(top,rgba(0,0,0,0.05),rgba(0,0,0,0.05));
+	background-image: -webkit-linear-gradient(top,rgba(0,0,0,0.05),rgba(0,0,0,0.05));
+	background-image: -o-linear-gradient(top,rgba(0,0,0,0.05),rgba(0,0,0,0.05));
+	background-image: linear-gradient(to bottom,rgba(0,0,0,0.05),rgba(0,0,0,0.05));
+	background-repeat: repeat-x;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.archive-name {
+	display: block;
+	text-transform: capitalize;
+	color: #fff;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+	text-align: center;
+}
+.page-wrap {
+	position: relative;
+	width: 100%;
+	margin-top: 20px;
+}
+.group, #footer {
+	width: 75%;
+	margin: 0 auto;
+}
+.author-picture {
+	float: left;
+	display: block;
+	margin-right: 10px;
+}
+.author-name {
+	font-family: "Droid Sans",sans-serif;
+	display: block;
+	font-size: 16px;
+	font-weight: 700;
+	color: #333332;
+	line-height: 1.2;
+	min-width: 100%;
+	text-align: right;
+}
+.author-bio {
+	font-family: "Droid Serif",Times,serif;
+	font-style: italic;
+}
+.featured-image, .featured-img {
+	top: 0;
+	width: 100%;
+	height: 537px;
+	left: 0;
+}
+.comment-count {
+	float: right;
+	color: white;
+	padding: 0 16px 0 16px;
+	opacity: .2;
+	font-size: 25px;
+	cursor: pointer;
+	visibility: hidden;
+}
+.bubble-active, .comment-count:hover {
+	visibility: visible !important;
+	opacity: 1;
+}
+.comment-visible>.comment-count {
+	visibility: visible;
+}
+#comment-sidebar {
+	visibility: hidden;
+	top: 0;
+	display: block;
+	position: absolute;
+	right: 0;
+	width: 50%;
+}
+#author, #email, #url, #comment {
+	font-size: 16px;
+	outline: 0;
+	border: none;
+	width: 100%;
+}
+.children {
+	margin: 7px 0 0 20px;
+}
+.nav-list {
+	margin-top: 30px;
+	position: relative;
+	font-weight: 400;
+}
+.nav-list a, .nav-list a:visited {
+	line-height: 46px;
+	color: #b3b3b1;
+	font-weight: 700;
+	display: block;
+	padding: 0 16px 0 22px;
+	height: 43px;
+}
+.nav-list a:hover {
+	color: white;
+	background-color: rgba(60,60,60,.5);
+}
+span[class*="icon-"] {
+	margin-right: 20px;
+}
+a#nav-toggle {
+	width: 30px;
+	height: 30px;
+	padding: 5px;
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	background: #232322;
+	color: white;
+	font-weight: bolder;
+	z-index: 999;
+}
+
+.post-content {
+	font-family: "Droid Serif",serif;
+	font-size: 22px;	
+	line-height: 1.45;
+}
+.post-content img {
+	padding-left: 5%;
+	width: 90%;
+	height: 90%;
+}
+.meta {
+	color: #818181;
+}
+.bio-and-post-group {
+	overflow: hidden;
+}
+#footer {
+	text-align: right;
+	border-top: 1px #e3e3e3 solid;
+}
+p { 
+	margin: 0 0 10px 0; 
+	font-size: 22px;
+}
+.credit {
+	font-size: 12px;
+}
+a { text-decoration: none;}
+a, img {
+	border:none;
+}
+a { text-decoration: none;}
+a, img {
+	border:none;
+}
+h1 {
+	font-weight: 700;
+}
+h2 {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 1;	
+	margin: 0px;
+}
+h2 a {
+	color: #333333;
+}
+h3 {
+	font-weight: 400;
+	font-style: italic;
+	line-height: 1.2;
+	font-size: 32px;
+}
+h4 {
+	font-weight: 700;
+	font-size: 28px;
+}
+.index-box {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.post-title {
+	font-size: 48px;
+	line-height: 1.1;	
+}
+
+@media screen and (max-width: 960px) {
+	.group, #footer {
+		width: 90%;
+	}
+	#cover {
+		position: relative !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		height: 500px;
+	}
+	.cover-body {
+		left: 0 !important;
+		position: relative !important;
+		width: 100% !important;
+		height: 500px;
+	}
+	.bio {
+		margin-bottom: 5px;
+		display: block;
+	}
+	.author-bio {
+		font-size: 14px;
+		color: #818181;
+	}
+	.author-name {
+		text-align: left !important;
+	}
+	.post-date div {
+		font-weight: bold;
+		display: inline-block;
+		margin-right: .5rem;
+	}
+}
+
+@media screen and (min-width: 961px){
+	.page-wrap { 
+		width: 70%;
+		overflow: hidden;
+	}
+	.bio {
+		float: left;
+		width: 23%;
+		margin-top: 10px;
+	}
+	.author-picture, .author-name, .author-bio, .post-date {
+		float: right;
+		clear: right;
+	}
+	.avatar-73 {
+		border-radius: 50%;
+	}
+	.author-bio {
+		color: #818181;
+		font-weight: 400;
+		text-align: right;
+		margin-bottom: 10px;
+	}
+	.post-date {
+		font-size: 13px;
+		text-align: right;
+	}
+}
+
+@media screen {
+	body {
+		color: #333333;
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+		font-family: "Droid Sans",sans-serif;
+	}
+	.screen-reader-text { position: absolute; left: -9999px; top: -9999px; }
+	.clear { clear: both; }
+	.group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+	* html .group, *:first-child+html .group { zoom: 1; }
+	.fn, .says {
+		font-size: 30px;
+	}
+	.thread-odd {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	.disqus_comments {
+		margin-top: 20px;
+	}
+	.bio-and-post-group {
+		overflow: hidden;
+	}
+}
