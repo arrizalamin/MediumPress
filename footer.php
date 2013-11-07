@@ -14,10 +14,11 @@
 		<!-- Don't forget analytics -->
 	</div>
 </div>
-	<?php if(is_single()): ?>
 
 	<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/jquery.mousewheel.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/jquery.jscrollpane.min.js"></script>
+
+	<?php if(is_single()): ?>
 	<script type="text/javascript">
 		$(function()
 		{
