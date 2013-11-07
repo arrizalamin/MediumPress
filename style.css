@@ -168,7 +168,7 @@ html {
 	height: 100%;
 }
 body {
-	height: 100%;
+	min-height: 100%;
 	overflow-x: hidden;
 	font-weight: 400;
 	color: #333332;
@@ -263,7 +263,7 @@ li {
 	position: fixed;
 	left: -280px;
 	width: 280px;
-	background-color: #232322;
+	background: url('images/background-nav.png');
 	z-index: 1;
 	top: 0;
 }
@@ -458,6 +458,7 @@ a#nav-toggle {
 }
 #footer {
 	text-align: right;
+	border-top: 1px #e3e3e3 solid;
 }
 .post_title a {
 	color: #333333;
