@@ -49,7 +49,7 @@
 		}
 	}
 	@media screen and (min-width: 961px) {
-		<?php if(is_home() || is_archive()): ?>
+		<?php if(is_home() || is_archive() || is_search()): ?>
 		.page-wrap {
 			float: right;
 		}
@@ -57,6 +57,10 @@
 		<?php if(is_single() || is_page()): ?>
 		.page-wrap {
 			width: 100%;
+		}
+		.post-content {
+			margin-top: 25px;
+			margin-bottom: 30px;
 		}
 		.index-box {
 			width: 75%;
@@ -101,14 +105,14 @@
 
 	<div class="wrapper">
 		<a href="#nav" id="nav-toggle" class="do-not-print"><img src="<?php echo !empty($navicon)?$navicon:bloginfo('stylesheet_directory')."/images/navicon.png" ?>" style="width:30px;height:30px;"></a>
-		<?php if(is_home() || is_archive()): ?>
+		<?php if(is_home() || is_archive() || is_search()): ?>
 		<aside id="cover">
 			<div class="cover-body" style="background-image:url('<?php bloginfo('template_url')?>/images/cover.jpg');">
 				<div class="cover-body-inner">
 					<h1 class="cover-title"><?php bloginfo('name') ?></h1>
 					<p class="cover-description"><?php bloginfo('description') ?></p>
 					<div class="cover-bottom">
-						<?php if(is_home() || is_tag() || is_category()): ?>
+						<?php if(is_home() || is_tag() || is_category() || is_search()): ?>
 							<a class="btn" href="<?php bloginfo('rss2_url') ?>" style="background-color:#57ad68;color:#fff;"><i class="icon-feed"></i> Subscribe via RSS</a>
 						<?php endif; ?>
 
@@ -127,6 +131,6 @@
 		</aside>
 	<?php endif; ?>
 	<?php if (!is_single() && !is_page()) {
-		echo (is_search())?'<div class="page-wrap" style="min-height:700px;">':'<div class="page-wrap">';
+		echo '<div class="page-wrap">';
 		echo '	<div class="group">';
 	} ?>
