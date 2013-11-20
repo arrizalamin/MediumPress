@@ -4,8 +4,6 @@
 
 	<?php $post = $posts[0]; ?>
 
-	<h2>Search Result</h2>
-
 	<?php while (have_posts()) : the_post(); ?>
 	
 	<div <?php post_class('index-box') ?>>
