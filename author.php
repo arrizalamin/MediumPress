@@ -19,7 +19,6 @@
 		</div>
 		<div class="post-meta-data">
 			<?php the_tags('Tags: ', ', ', '<br />'); ?>
-			<hr class="hratas"/>
 		</div>
 	</div>
 
