@@ -22,7 +22,11 @@ html {
 body {
 	height: 100%;
 	overflow-x: hidden;
+	font-family: "Droid Serif",Georgia,Cambria,"Times New Roman",Times,serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
 	font-weight: 400;
+	font-style: normal;
 	color: #333332;
 	font-size: 18px;
 	line-height: 1.4;
@@ -192,7 +196,6 @@ li {
 	margin-right: 10px;
 }
 .author-name {
-	font-family: "Droid Sans",sans-serif;
 	display: block;
 	font-size: 16px;
 	font-weight: 700;
@@ -201,8 +204,14 @@ li {
 	min-width: 100%;
 	text-align: right;
 }
+.bio {
+	font-size: 14px;
+	line-height: 1.2;
+}
+.author-name {
+	font-weight: 700;
+}
 .author-bio {
-	font-family: "Droid Serif",Times,serif;
 	font-style: italic;
 }
 .featured-image, .featured-img {
@@ -278,14 +287,22 @@ a#nav-toggle {
 }
 
 .post-content {
-	font-family: "Droid Serif",serif;
-	font-size: 22px;	
 	line-height: 1.45;
+	margin-top: 25px;
+	margin-bottom: 30px;
+	word-wrap: break-word;
+}
+.post-content p {
+	margin-bottom: 7px;
+	font-size: 22px;
 }
 .post-content img {
 	padding-left: 5%;
 	width: 90%;
 	height: 90%;
+}
+.post-meta-data {
+	font-weight: 700;
 }
 .meta {
 	color: #818181;
@@ -339,8 +356,9 @@ h4 {
 	margin-bottom: 10px;
 }
 .post-title {
-	font-size: 48px;
-	line-height: 1.1;	
+	font-size: 56px;
+	font-weight: 700;
+	line-height: 1;	
 }
 
 @media screen and (max-width: 960px) {
@@ -406,12 +424,20 @@ h4 {
 	}
 }
 
+@media screen and (max-width: 550px) {
+	.post-title {
+		font-size: 48px;
+	}
+	.post-content p {
+		font-size: 18px;
+	}
+}
+
 @media screen {
 	body {
 		color: #333333;
 		text-rendering: optimizeLegibility;
 		-webkit-font-smoothing: antialiased;
-		font-family: "Droid Sans",sans-serif;
 	}
 	.screen-reader-text { position: absolute; left: -9999px; top: -9999px; }
 	.clear { clear: both; }

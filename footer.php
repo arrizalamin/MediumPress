@@ -24,8 +24,7 @@
 
 	<?php if(is_single()): ?>
 	<script type="text/javascript">
-		$(function()
-		{
+		$(function() {
 			$('#nav').jScrollPane();
 			$('.jspVerticalBar, .jspTrack').css('background', 'transparent');
 			$('.jspDrag').css({
@@ -33,8 +32,7 @@
 				'border-radius': '16px'
 			});
 		});
-	</script>
-	<script type="text/javascript">
+
 		var a = $('.post-content p, .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6, .post-content img');
 		a.each(function(){
 			$(this).prepend('<div class="comment-count" style="background:url(<?php bloginfo('template_url') ?>/images/bubble.png) no-repeat center bottom;"><p style="text-align:center;line-height:1;"><?php comments_number('+',1,'%') ?></p></div>');
@@ -44,8 +42,7 @@
 		},function(){
 			$(this).removeClass('comment-visible');
 		});
-	</script>
-	<script type="text/javascript">
+
 		var comment1 = $("#comment1");
 		var comment2 = $("#comment2");
 		var nav_form_comment = $(".nav-form-comment");
