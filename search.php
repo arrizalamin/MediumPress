@@ -1,36 +1,38 @@
 <?php get_header(); ?>
 
-<?php if (have_posts()) : ?>
+	<?php if (have_posts()) : ?>
 
-	<?php $post = $posts[0]; ?>
+		<h2>Search Results</h2>
 
-	<h2>Search Result</h2>
+		<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
 
-	<?php while (have_posts()) : the_post(); ?>
-	
-	<div <?php post_class('index-box') ?>>
-		
-		<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
+		<?php while (have_posts()) : the_post(); ?>
 
-		<div id="post-<?php the_ID(); ?>" class="post-title">
-			<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-		</div>
-		
-		<div class="post-content">
-			<?php the_excerpt(); ?>
-		</div>
-		<div class="post-meta-data">
-			<?php the_tags('Tags: ', ', ', '<br />'); ?>
-		</div>
-	</div>
+			<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-<?php endwhile; ?>
-<div>
+			<div class="post_title">
+				<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+			</div>
 
-<?php else : ?>
+				<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
 
-	<h2>No post found</h2>
+				<div class="entry">
 
-<?php endif; ?>
+					<?php the_excerpt(); ?>
+
+				</div>
+
+			</div>
+
+		<?php endwhile; ?>
+
+		<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
+
+	<?php else : ?>
+
+		<h2>No posts found.</h2>
+
+	<?php endif; ?>
+	<div>
 
 <?php get_footer(); ?>
