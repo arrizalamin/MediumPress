@@ -46,15 +46,17 @@ $(document).ready(function(){
 	};
 
 	function open_comment(top) {
-		pagecontent.animate({
-			'left': "-50%",
-			'margin-right': 0
-		}, 300, function(){
-			comment.css({
-				'visibility': 'visible',
-				'margin-top': top
+		if(pagecontent.css('left') != "-50%"){
+			pagecontent.animate({
+				'left': "-50%",
+				'margin-right': 0
+			}, 300, function(){
+				comment.css({
+					'visibility': 'visible',
+					'margin-top': top
+				});
 			});
-		});
+		}
 	}
 
 	function close_comment() {
