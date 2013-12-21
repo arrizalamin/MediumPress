@@ -289,10 +289,11 @@ a#nav-toggle {
 .post-content {
 	line-height: 1.45;
 	word-wrap: break-word;
+    margin-top: 10px;
 }
 .post-content p {
-	margin-bottom: 7px;
-	font-size: 22px;
+	margin-bottom: 18px;
+	font-size: 18px;
 }
 .post-content img {
 	padding-left: 5%;
@@ -354,8 +355,8 @@ h4 {
 	margin-bottom: 10px;
 }
 .post-title {
-	font-size: 56px;
-	font-weight: 700;
+	font-size: 28px;
+	font-weight: 500;
 	line-height: 1;	
 }
 
