@@ -16,7 +16,11 @@
 	</div>
 
 	<ul class="commentlist" style="list-style:none;">
-		<?php wp_list_comments('type=comment&max_depth=2&callback=mediumpress_comment'); ?>
+		<?php wp_list_comments([
+			'type' => 'comment',
+			'max_depth' => 2,
+			'callback' => 'mediumpress_comment'
+		]); ?>
 	</ul>
 
 	<p id="comment-toggle" style="font-size:15px;cursor:pointer;margin-top:15px;">Leave a comment for <?php the_author_posts_link(); ?></p>
