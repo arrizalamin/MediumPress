@@ -4,9 +4,7 @@
 		die ('Please do not load this page directly. Thanks!');
 
 	if ( post_password_required() ) { ?>
-		This post is password protected. Enter the password to view comments.
-	<?php
-		return;
+		return "This post is password protected. Enter the password to view comments."
 	}
 ?>
 
