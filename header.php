@@ -101,7 +101,6 @@
 		</ul>
 	</nav>
 
-
 	<div class="wrapper">
 		<a href="#nav" id="nav-toggle" class="do-not-print"><img src="<?php echo !empty($navicon)?$navicon:bloginfo('stylesheet_directory')."/images/navicon.png" ?>" style="width:30px;height:30px;"></a>
 		<?php if(is_home() || is_archive() || is_search()): ?>
