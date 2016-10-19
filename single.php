@@ -33,7 +33,10 @@
 						<div class="author-bio"><?php the_author_meta('description') ?></div>
 						<div class="post-date"><?php echo (get_the_modified_time() !== get_the_time())?"Updated ".get_the_modified_time('F j, Y'):"Posted ".get_the_time('F j, Y') ?></div>
 					</div>
-
+					</div>
+					</div>
+					</div>
+					</div>
 <?php endwhile; endif; ?>    
 
 <?php get_footer(); ?>
