@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
 		<div <?php post_class('index-box') ?> id="post-<?php the_ID(); ?>">
