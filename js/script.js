@@ -72,7 +72,7 @@ $(document).ready(function(){
 		comment_toggle.fadeOut('fast');
 	}
 
-	button.live("click", function(e){
+	button.on("click", function(e){
 		e.preventDefault();
 		var leftval = pagebody.css('left');
 		
@@ -81,7 +81,7 @@ $(document).ready(function(){
 		}
 	});
 
-	bubble.live("click", function(e){
+	bubble.on("click", function(e){
 		e.preventDefault();
 		var leftval = pagebody.css('left');
 		var position = $(this).offset();
@@ -92,7 +92,7 @@ $(document).ready(function(){
 		}
 	});
 
-	pagebody.live("click", function(){
+	pagebody.on("click", function(){
 		var leftval = pagebody.css('left');
 
 		if(leftval == "280px") {
@@ -100,14 +100,14 @@ $(document).ready(function(){
 		}
 	});
 
-	pagecontent.live("click", function(){
+	pagecontent.on("click", function(){
 		var leftval = pagecontent.css('left');
 		if(leftval == "-50%") {
 			close_comment();
 		}
 	})
 
-	search_icon.live("click", function(){
+	search_icon.on("click", function(){
 		if(search_form.css('display') == "none"){
 			search_form.slideDown('slow');
 		} else {
